@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Junseo (Jun) Lim — Software Engineer</title>
+  <meta name="description" content="Junseo (Jun) Lim — Computer Science at UIUC. Software engineer focused on distributed systems, backend infrastructure, and applied AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#top" class="nav__brand">JL</a>
+      <ul class="nav__links">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+        <span class="theme-toggle__dot"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero container">
+      <p class="hero__eyebrow">Software Engineer · San Diego, CA</p>
+      <h1 class="hero__title">Junseo <span>(Jun)</span> Lim</h1>
+      <p class="hero__lead">
+        Computer Science at the University of Illinois at Urbana-Champaign.
+        I build <strong>distributed systems</strong>, <strong>backend infrastructure</strong>,
+        and <strong>applied&nbsp;AI</strong> — from Linux-kernel schedulers to agentic LLM pipelines.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#experience">View experience</a>
+        <a class="btn btn--ghost" href="mailto:junlim954@gmail.com">Get in touch</a>
+      </div>
+      <ul class="hero__meta">
+        <li><a href="https://github.com/7unlim" target="_blank" rel="noopener">github.com/7unlim</a></li>
+        <li><a href="https://linkedin.com/in/jun-lim1" target="_blank" rel="noopener">linkedin.com/in/jun-lim1</a></li>
+        <li><a href="mailto:junlim954@gmail.com">junlim954@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section class="section container" id="experience">
+      <div class="section__head">
+        <span class="section__index">01</span>
+        <h2 class="section__title">Experience</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="entry">
+          <div class="entry__meta">
+            <span class="entry__date">May 2026 - Aug 2026</span>
+            <span class="entry__place">San Jose, CA</span>
+          </div>
+          <div class="entry__body">
+            <h3 class="entry__role">Software Engineer Intern</h3>
+            <p class="entry__org">TikTok</p>
+            <ul class="entry__points">
+              <li>Integrated LangSmith into a LangChain agent pipeline via a dual-backend observability facade alongside an internal tracing tool, enabling full LLM trace visibility across agents and RPC calls.</li>
+              <li>Authored a reusable Claude Code skill for automated tracing instrumentation, letting new agents and RPC services join the trace tree without manual setup.</li>
+              <li>Optimized and extended a distributed multi-service backend spanning RPC orchestration, Redis-backed task state, and event-driven inter-service communication.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry__meta">
+            <span class="entry__date">Jun 2025 - Aug 2025</span>
+            <span class="entry__place">Whippany, NJ</span>
+          </div>
+          <div class="entry__body">
+            <h3 class="entry__role">Software Engineer Intern</h3>
+            <p class="entry__org">Barclays</p>
+            <ul class="entry__points">
+              <li>Designed and implemented a RAG-based agentic AI framework with CrewAI, enabling hundreds of post-trade business analysts to query complex financial regulations in natural language.</li>
+              <li>Built a high-throughput ingestion pipeline handling up to 1&nbsp;TB of regulatory data, parsing XML via XPath and running SQL transformations to normalize structured datasets.</li>
+              <li>Integrated WebSocket-based streaming across the AI framework, ingestion pipeline, and analyst tools, reducing end-to-end processing latency by 37%.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry__meta">
+            <span class="entry__date">Jun 2025 - Aug 2025</span>
+            <span class="entry__place">Champaign, IL</span>
+          </div>
+          <div class="entry__body">
+            <h3 class="entry__role">Undergraduate Researcher</h3>
+            <p class="entry__org">FORWARD Data Lab — UIUC</p>
+            <ul class="entry__points">
+              <li>Engineered an evaluation pipeline for large-scale document generation, automating checks for coherence, accuracy, and reliability under variable compute constraints.</li>
+              <li>Developed resource-aware workflows over academic data sources (e.g. Semantic Scholar), using caching and request shaping to cut invalid queries and stabilize latency.</li>
+              <li>Implemented systems-level optimizations — process scheduling, error handling, and metrics — to improve throughput across research automation services.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry__meta">
+            <span class="entry__date">Aug 2023 - Jun 2024</span>
+            <span class="entry__place">Champaign, IL</span>
+          </div>
+          <div class="entry__body">
+            <h3 class="entry__role">Software Engineer Intern</h3>
+            <p class="entry__org">Geni</p>
+            <ul class="entry__points">
+              <li>Co-authored a published review paper on AI agents, contributing to a Knowledge-Graph-backed LLM with long-term and complex memory preservation.</li>
+              <li>Architected scalable full-stack solutions on the MERN stack, building an ML pipeline that improved client-server communication by 44%.</li>
+              <li>Coordinated and delegated work for a cross-functional team of 7 engineers.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Projects -->
+    <section class="section container" id="projects">
+      <div class="section__head">
+        <span class="section__index">02</span>
+        <h2 class="section__title">Selected Projects</h2>
+      </div>
+
+      <div class="projects">
+        <article class="project">
+          <h3 class="project__title">Rate-Monotonic CPU Scheduler</h3>
+          <p class="project__stack">C · Linux Kernel</p>
+          <p class="project__desc">
+            A preemptive real-time CPU scheduler built as a Linux kernel module using
+            Rate-Monotonic Scheduling with utilization-bound admission control. A kernel
+            dispatching thread handles context switches via scheduler APIs
+            (<code>sched_setattr</code>, <code>wake_up_process</code>), exposed to user space
+            through a <code>/proc</code> interface. Uses the slab allocator for PCB memory and
+            fixed-point arithmetic to avoid floating-point overhead in kernel space.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3 class="project__title">Distributed Transaction System</h3>
+          <p class="project__stack">Go · Two-Phase Commit · Timestamp Ordering</p>
+          <p class="project__desc">
+            A distributed ACID transaction system across 5 branch servers in Go, supporting
+            concurrent clients with full atomicity, consistency, and isolation through
+            timestamped concurrency control and two-phase commit. Per-account tentative write
+            versioning with wait-die deadlock prevention guarantees serial equivalence without
+            global locks.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section container" id="skills">
+      <div class="section__head">
+        <span class="section__index">03</span>
+        <h2 class="section__title">Technical Skills</h2>
+      </div>
+
+      <div class="skills">
+        <div class="skill-group">
+          <h3 class="skill-group__label">Languages</h3>
+          <ul class="tags">
+            <li>C++</li><li>C</li><li>Python</li><li>JavaScript / TypeScript</li>
+            <li>Go</li><li>Rust</li><li>WebAssembly</li><li>SQL</li><li>R</li><li>HTML / CSS</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__label">Frameworks</h3>
+          <ul class="tags">
+            <li>React</li><li>Node.js</li><li>Flask</li><li>Spring</li><li>PostgreSQL</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__label">Developer Tools</h3>
+          <ul class="tags">
+            <li>Git</li><li>Docker</li><li>Linux Kernel Modules</li><li>GCP</li><li>AWS</li><li>Cloudflare</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__label">Libraries</h3>
+          <ul class="tags">
+            <li>PyTorch</li><li>TensorFlow</li><li>Scikit-learn</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section container" id="education">
+      <div class="section__head">
+        <span class="section__index">04</span>
+        <h2 class="section__title">Education</h2>
+      </div>
+      <div class="education">
+        <div class="education__main">
+          <h3>University of Illinois at Urbana-Champaign</h3>
+          <p class="education__degree">B.S. in Computer Science · 3.7 / 4.0 GPA</p>
+          <p class="education__date">August 2023 - May 2027</p>
+        </div>
+        <div class="education__coursework">
+          <h4>Relevant Coursework</h4>
+          <ul class="tags tags--muted">
+            <li>Distributed Systems</li><li>Operating Systems</li>
+            <li>Programming Languages &amp; Compilers</li><li>Data Structures</li>
+            <li>Machine Learning</li><li>System Programming</li>
+            <li>Database Systems</li><li>Computer Architecture</li>
+            <li>Algorithms &amp; Models of Computation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--contact container" id="contact">
+      <div class="section__head">
+        <span class="section__index">05</span>
+        <h2 class="section__title">Get in touch</h2>
+      </div>
+      <p class="contact__lead">
+        Open to software engineering roles and interesting systems &amp; AI problems.
+        The fastest way to reach me is email.
+      </p>
+      <div class="contact__links">
+        <a class="contact__link" href="mailto:junlim954@gmail.com">
+          <span class="contact__kind">Email</span>
+          <span class="contact__value">junlim954@gmail.com</span>
+        </a>
+        <a class="contact__link" href="https://github.com/7unlim" target="_blank" rel="noopener">
+          <span class="contact__kind">GitHub</span>
+          <span class="contact__value">github.com/7unlim</span>
+        </a>
+        <a class="contact__link" href="https://linkedin.com/in/jun-lim1" target="_blank" rel="noopener">
+          <span class="contact__kind">LinkedIn</span>
+          <span class="contact__value">linkedin.com/in/jun-lim1</span>
+        </a>
+        <a class="contact__link" href="tel:+18587505117">
+          <span class="contact__kind">Phone</span>
+          <span class="contact__value">858-750-5117</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> Junseo Lim · Built with care, no frameworks.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
