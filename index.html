@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Junseo (Jun) Lim — Software Engineer</title>
-  <meta name="description" content="Junseo (Jun) Lim — Computer Science at UIUC. Software engineer focused on distributed systems, backend infrastructure, and applied AI." />
+  <title>Junseo (Jun) Lim — Systems & Distributed Software Engineer</title>
+  <meta name="description" content="Junseo (Jun) Lim — Computer Science at UIUC. Software engineer building full-stack, data-driven applications and low-level systems software: distributed systems, systems programming, and real-time data pipelines." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -18,6 +18,7 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#reading">Reading</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
@@ -33,11 +34,19 @@
       <h1 class="hero__title">Junseo <span>(Jun)</span> Lim</h1>
       <p class="hero__lead">
         Computer Science at the University of Illinois at Urbana-Champaign.
-        I build <strong>distributed systems</strong>, <strong>backend infrastructure</strong>,
-        and <strong>applied&nbsp;AI</strong> — from Linux-kernel schedulers to agentic LLM pipelines.
+        I build <strong>full-stack, data-driven applications</strong> and
+        <strong>low-level systems software</strong> — from Linux-kernel schedulers and a
+        from-scratch Raft implementation to real-time data pipelines. I like to own the
+        stack end to end, learn new domains fast, and ship in days rather than months.
       </p>
+      <ul class="tags hero__focus">
+        <li>Distributed Systems</li>
+        <li>Systems Programming</li>
+        <li>Data Pipelines</li>
+        <li>Full-Stack</li>
+      </ul>
       <div class="hero__actions">
-        <a class="btn btn--primary" href="#experience">View experience</a>
+        <a class="btn btn--primary" href="#projects">See what I've built</a>
         <a class="btn btn--ghost" href="mailto:junlim954@gmail.com">Get in touch</a>
       </div>
       <ul class="hero__meta">
@@ -67,6 +76,7 @@
               <li>Integrated LangSmith into a LangChain agent pipeline via a dual-backend observability facade alongside an internal tracing tool, enabling full LLM trace visibility across agents and RPC calls.</li>
               <li>Authored a reusable Claude Code skill for automated tracing instrumentation, letting new agents and RPC services join the trace tree without manual setup.</li>
               <li>Optimized and extended a distributed multi-service backend spanning RPC orchestration, Redis-backed task state, and event-driven inter-service communication.</li>
+              <li>Currently working, with a lot more to come soon!</li>
             </ul>
           </div>
         </li>
@@ -81,8 +91,8 @@
             <p class="entry__org">Barclays</p>
             <ul class="entry__points">
               <li>Designed and implemented a RAG-based agentic AI framework with CrewAI, enabling hundreds of post-trade business analysts to query complex financial regulations in natural language.</li>
-              <li>Built a high-throughput ingestion pipeline handling up to 1&nbsp;TB of regulatory data, parsing XML via XPath and running SQL transformations to normalize structured datasets.</li>
-              <li>Integrated WebSocket-based streaming across the AI framework, ingestion pipeline, and analyst tools, reducing end-to-end processing latency by 37%.</li>
+              <li>Built a high-throughput data ingestion pipeline handling up to 1&nbsp;TB of regulatory data, parsing XML via XPath and running SQL transformations to normalize and integrate structured datasets.</li>
+              <li>Integrated WebSocket-based real-time streaming across the AI framework, ingestion pipeline, and analyst tools, cutting end-to-end processing latency by 37%.</li>
             </ul>
           </div>
         </li>
@@ -130,15 +140,14 @@
 
       <div class="projects">
         <article class="project">
-          <h3 class="project__title">Rate-Monotonic CPU Scheduler</h3>
-          <p class="project__stack">C · Linux Kernel</p>
+          <h3 class="project__title">Raft Consensus, From Scratch</h3>
+          <p class="project__stack">Go · Consensus · Replication</p>
           <p class="project__desc">
-            A preemptive real-time CPU scheduler built as a Linux kernel module using
-            Rate-Monotonic Scheduling with utilization-bound admission control. A kernel
-            dispatching thread handles context switches via scheduler APIs
-            (<code>sched_setattr</code>, <code>wake_up_process</code>), exposed to user space
-            through a <code>/proc</code> interface. Uses the slab allocator for PCB memory and
-            fixed-point arithmetic to avoid floating-point overhead in kernel space.
+            A from-scratch implementation of the Raft consensus algorithm in Go: randomized
+            leader election, log replication with consistency checks, and commit rules that
+            preserve safety across leader changes and node failures. Built to understand how
+            real systems reach agreement under partitions — the foundations behind replicated,
+            fault-tolerant data stores.
           </p>
         </article>
 
@@ -153,7 +162,46 @@
             global locks.
           </p>
         </article>
+
+        <article class="project">
+          <h3 class="project__title">Rate-Monotonic CPU Scheduler</h3>
+          <p class="project__stack">C · Linux Kernel · Concurrency</p>
+          <p class="project__desc">
+            A preemptive real-time CPU scheduler built as a Linux kernel module using
+            Rate-Monotonic Scheduling with utilization-bound admission control. A kernel
+            dispatching thread handles context switches via scheduler APIs
+            (<code>sched_setattr</code>, <code>wake_up_process</code>), exposed to user space
+            through a <code>/proc</code> interface. Uses the slab allocator for PCB memory and
+            fixed-point arithmetic to avoid floating-point overhead in kernel space.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3 class="project__title">Kernel Page Buffer Cache</h3>
+          <p class="project__stack">C · Linux Kernel · Memory Management</p>
+          <p class="project__desc">
+            A kernel-space page buffer cache for backing store I/O, managing page allocation,
+            lookup, and eviction to keep hot pages resident and minimize redundant disk
+            traffic. A hands-on study in memory management, cache policy, and the performance
+            trade-offs of working directly against kernel memory primitives.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3 class="project__title">Filesystem Checker</h3>
+          <p class="project__stack">C · On-Disk Formats · Data Integrity</p>
+          <p class="project__desc">
+            An <code>fsck</code>-style consistency checker that walks a filesystem's on-disk
+            structures — inodes, block bitmaps, and directory entries — to detect and report
+            corruption. Reinforced careful reasoning about binary serialization formats,
+            invariants, and recovering structured data from raw bytes.
+          </p>
+        </article>
       </div>
+
+      <a class="projects__more" href="https://github.com/7unlim" target="_blank" rel="noopener">
+        More on GitHub &rarr;
+      </a>
     </section>
 
     <!-- Skills -->
@@ -167,8 +215,16 @@
         <div class="skill-group">
           <h3 class="skill-group__label">Languages</h3>
           <ul class="tags">
-            <li>C++</li><li>C</li><li>Python</li><li>JavaScript / TypeScript</li>
-            <li>Go</li><li>Rust</li><li>WebAssembly</li><li>SQL</li><li>R</li><li>HTML / CSS</li>
+            <li>Rust</li><li>Go</li><li>TypeScript</li><li>C</li><li>C++</li>
+            <li>Python</li><li>WebAssembly</li><li>SQL</li><li>R</li><li>HTML / CSS</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__label">Systems &amp; Concepts</h3>
+          <ul class="tags">
+            <li>Concurrency</li><li>Memory Management</li><li>RPC</li>
+            <li>Consensus (Raft)</li><li>Two-Phase Commit</li><li>WebSockets</li>
+            <li>Caching</li><li>Serialization</li>
           </ul>
         </div>
         <div class="skill-group">
@@ -217,15 +273,43 @@
       </div>
     </section>
 
+    <!-- Reading & Approach -->
+    <section class="section container" id="reading">
+      <div class="section__head">
+        <span class="section__index">05</span>
+        <h2 class="section__title">Reading &amp; Approach</h2>
+      </div>
+      <div class="reading">
+        <p class="reading__lead">
+          I learn the field by building things from scratch and reading the texts that shaped
+          it. Two that have stuck with me:
+        </p>
+        <ul class="reading__list">
+          <li>
+            <span class="reading__book">Designing Data-Intensive Applications</span>
+            <span class="reading__note">Kleppmann — the big ideas behind reliable, scalable, maintainable systems; the lens I bring to data and distributed work.</span>
+          </li>
+          <li>
+            <span class="reading__book">Structure and Interpretation of Computer Programs</span>
+            <span class="reading__note">Abelson &amp; Sussman — abstraction, interpretation, and thinking clearly about programs from first principles.</span>
+          </li>
+        </ul>
+        <p class="reading__ethos">
+          My bias: smaller and faster is better, and building it yourself beats waiting on a
+          black box. I'd rather prototype, measure, and iterate than over-design up front.
+        </p>
+      </div>
+    </section>
+
     <!-- Contact -->
     <section class="section section--contact container" id="contact">
       <div class="section__head">
-        <span class="section__index">05</span>
+        <span class="section__index">06</span>
         <h2 class="section__title">Get in touch</h2>
       </div>
       <p class="contact__lead">
-        Open to software engineering roles and interesting systems &amp; AI problems.
-        The fastest way to reach me is email.
+        Open to software engineering roles building full-stack tooling, distributed systems,
+        and infrastructure for hard, hands-on problems. The fastest way to reach me is email.
       </p>
       <div class="contact__links">
         <a class="contact__link" href="mailto:junlim954@gmail.com">

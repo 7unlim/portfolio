@@ -197,6 +197,10 @@ code {
 .btn--ghost { border-color: var(--line); color: var(--ink); }
 .btn--ghost:hover { border-color: var(--accent); color: var(--accent); }
 
+.hero .hero__focus {
+  margin: 4px 0 40px;
+}
+
 .hero__meta {
   display: flex;
   flex-wrap: wrap;
@@ -324,6 +328,16 @@ code {
   margin: 0;
 }
 
+.projects__more {
+  display: inline-block;
+  margin-top: 26px;
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+.projects__more:hover { transform: translateX(3px); }
+
 /* ---------- Skills ---------- */
 .skills {
   display: grid;
@@ -384,6 +398,43 @@ code {
   color: var(--ink-muted);
   margin: 0 0 16px;
   font-weight: 500;
+}
+
+/* ---------- Reading & Approach ---------- */
+.reading__lead {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  max-width: 620px;
+  margin: 0 0 28px;
+}
+.reading__list {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+.reading__list li {
+  display: grid;
+  gap: 4px;
+  padding-left: 18px;
+  border-left: 2px solid var(--accent-soft);
+}
+.reading__book {
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+}
+.reading__note {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.reading__ethos {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  max-width: 620px;
+  margin: 0;
+  font-style: italic;
 }
 
 /* ---------- Contact ---------- */
